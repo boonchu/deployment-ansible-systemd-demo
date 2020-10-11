@@ -49,3 +49,19 @@ changed: [cow1]
 PLAY RECAP *********************************************************************************************************************************
 cow1                       : ok=6    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
+  
+  * output from systemctl status.
+
+```
+[root@cow1 bigchoo]# systemctl status demo
+● demo.service - Demo service
+   Loaded: loaded (/etc/systemd/system/demo.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sat 2020-10-10 16:20:18 +07; 2min 28s ago
+ Main PID: 26932 (demo)
+    Tasks: 4 (limit: 11332)
+   Memory: 4.3M
+   CGroup: /system.slice/demo.service
+           └─26932 /usr/local/bin/demo
+
+Oct 10 16:20:18 cow1 systemd[1]: Started Demo service.
+```
